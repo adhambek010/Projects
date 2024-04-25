@@ -1,5 +1,6 @@
 package uz.ilmnajot.elibrary.service;
 
+import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -21,17 +22,12 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor
 public class AuthServiceImpl implements AuthService {
 
     private final UserRepository userRepository;
     private final ModelMapper modelMapper;
 /*    private final JwtProvider jwtProvider;*/
-
-    public AuthServiceImpl(UserRepository userRepository, ModelMapper modelMapper) {
-        this.userRepository = userRepository;
-        this.modelMapper = modelMapper;
-
-    }
 
     @Override
     public ApiResponse login(LoginRequest request) {
