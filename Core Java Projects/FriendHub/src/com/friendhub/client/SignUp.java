@@ -15,7 +15,7 @@ import java.util.Scanner;
 
 public class SignUp {
 
-	public static final String fileLocation = "C:\\CoreJavaProjects\\FriendHub\\UserData\\";
+	public static final String fileLocation = "C:\\JavaLearning\\Projects\\Core Java Projects\\FriendHub\\UserData\\";
 	private Socket socket;
 	private HashMap<User, String> usersuuids = new HashMap<>(5, 0.99f);
 	private ArrayList<String> fileNames = new ArrayList<>(5);

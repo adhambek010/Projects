@@ -30,8 +30,6 @@ public class Client implements Runnable {
 	public void run() {
 		try {
 			socket = new Socket("127.0.0.1", 2301);
-			System.out.println("Debug: Client is connected successfully");
-
 			writer = new PrintWriter(socket.getOutputStream(), true);
 			reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 			sc = new Scanner(System.in);
