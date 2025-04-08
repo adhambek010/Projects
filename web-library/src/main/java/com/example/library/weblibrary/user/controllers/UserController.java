@@ -1,6 +1,6 @@
 package com.example.library.weblibrary.user.controllers;
 
-import com.example.library.weblibrary.user.entities.User;
+import com.example.library.weblibrary.user.database.entities.UserEntity;
 import com.example.library.weblibrary.user.services.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.Authentication;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import static com.example.library.weblibrary.user.endpoints.Endpoints.*;
+import static com.example.library.weblibrary.config.endpoints.Endpoints.*;
 
 @RestController
 @AllArgsConstructor
@@ -22,7 +22,7 @@ public class UserController {
      * @return A list of all students.
      */
     @GetMapping(GET_ALL_STUDENTS)
-    public List<User> getAllStudents() {
+    public List<UserEntity> getAllStudents() {
         return studentService.getAllStudents();
     }
 
@@ -33,7 +33,7 @@ public class UserController {
      * @return The student with the specified ID.
      */
     @GetMapping(GET_STUDENT)
-    public User getStudent(@PathVariable String id) {
+    public UserEntity getStudent(@PathVariable String  id) {
         return studentService.getStudent(id);
     }
 
@@ -44,7 +44,7 @@ public class UserController {
      * @return The added student.
      */
     @PutMapping(ADD_STUDENT)
-    public User addStudent(@RequestBody User student) {
+    public UserEntity addStudent(@RequestBody UserEntity student) {
         return studentService.addStudent(student);
     }
 

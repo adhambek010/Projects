@@ -1,8 +1,8 @@
 package com.example.library.weblibrary.school.repository;
 
-import com.example.library.weblibrary.school.entities.School;
+import com.example.library.weblibrary.school.entities.SchoolEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface SchoolRepository extends JpaRepository<School, String> {
+public interface SchoolRepository extends JpaRepository<SchoolEntity, String> {
 
 }

@@ -1,7 +1,7 @@
 package com.example.library.weblibrary.user.enums;
 
 public enum Role {
-    SUPER_ADMIN,
+    USER,
     ADMIN,
-    STUDENT
+    SUPER_ADMIN;
 }

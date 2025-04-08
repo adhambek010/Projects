@@ -12,8 +12,8 @@ spring:
 application:
   security:
     jwt:
-      secret-key: 1111
-      expiration: 1000
+      secret-key: qnBbnNG75cdr8TQERRtrqSLXxwuSy8QRTs
+      expiration: 1200000 # 20 min
       refresh-token:
         expiration: 2000
 
@@ -21,4 +21,4 @@ application:
 logging:
   level:
     org.springframework: info
-    org.hibernate: error
+    org.hibernate: info
