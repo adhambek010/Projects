@@ -1,0 +1,13 @@
+insert into course (id, name, author)
+values(1, 'Learn AWS', 'in28minutes');
+
+select * from course;
+
+delete from course where id = 1;
+
+<%--\webjars\bootstrap\5.3.3\css\bootstrap.min.css--%>
+
+<%--\META-INF\resources\webjars\bootstrap\5.3.3\js\bootstrap.min.js--%>
+
+<%--\META-INF\resources\webjars\jquery\4.0.0-beta\src\jquery.js--%>
+<%--\META-INF\resources\webjars\bootstrap-datepicker\1.10.0\js\bootstrap-datepicker.min.js--%>

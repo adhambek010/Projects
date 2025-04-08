@@ -1,0 +1,6 @@
+    <script src="\webjars\jquery\js\dist\jquery.min.js"></script>
+    <script src="\webjars\jquery\4.0.0-beta\src\jquery.js"></script>
+    <script src="\webjars\bootstrap-datepicker\1.10.0\js\bootstrap-datepicker.min.js"></script>
+
+</body>
+</html>
