@@ -1,4 +1,4 @@
-package com.system.payment.student_payment_system.database.entities;
+package com.system.payment.student_payment_system.database.models;
 
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;

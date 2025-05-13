@@ -1,4 +1,4 @@
-package com.system.payment.student_payment_system.database.entities;
+package com.system.payment.student_payment_system.database.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
