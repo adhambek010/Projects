@@ -19,7 +19,7 @@ import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
-public class StudentService {
+public class StudentService implements InterfaceStudentService {
     private final StudentRepository studentRepository;
 
     public Student createStudent(@Valid Student student) {

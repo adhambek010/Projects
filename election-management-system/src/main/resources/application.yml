@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: election-management-system
+  datasource:
+    url: jdbc:postgresql://localhost:5432/election_management
+    username: postgres
+    password: secure
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database: postgresql
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true

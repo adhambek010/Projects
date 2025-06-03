@@ -2,17 +2,14 @@ package com.system.payment.student_payment_system.controllers;
 
 import com.system.payment.student_payment_system.database.dto.TransactionUpdateDto;
 import com.system.payment.student_payment_system.database.models.Transaction;
-import com.system.payment.student_payment_system.services.PaginationCreator;
-import com.system.payment.student_payment_system.services.TransactionService;
+import com.system.payment.student_payment_system.services.InterfaceTransactionService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 import java.time.LocalDate;
-import java.util.Optional;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
@@ -21,7 +18,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 @RequiredArgsConstructor
 @RequestMapping("/api")
 public class TransactionController {
-    private final TransactionService service;
+    private final InterfaceTransactionService service;
 
     @PostMapping("/students/{studentId}/transactions")
     public ResponseEntity<?> createNewTransaction(

@@ -3,7 +3,7 @@ package com.system.payment.student_payment_system.controllers;
 import com.system.payment.student_payment_system.database.dto.StudentUpdateDto;
 import com.system.payment.student_payment_system.database.models.Student;
 import com.system.payment.student_payment_system.database.models.Transaction;
-import com.system.payment.student_payment_system.services.StudentService;
+import com.system.payment.student_payment_system.services.InterfaceStudentService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -19,9 +19,9 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 @RestController
 @RequestMapping("/api/students")
 @RequiredArgsConstructor
-public class StudentController {
+public class StudentController{
 
-    private final StudentService studentService;
+    private final InterfaceStudentService studentService;
 
     @PostMapping
     public ResponseEntity<?> createStudent(@RequestBody @Valid Student student) {

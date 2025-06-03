@@ -17,11 +17,10 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.Optional;
-import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
-public class TransactionService {
+public class TransactionService implements InterfaceTransactionService {
 
     private final TransactionRepository repository;
     private final StudentRepository studentRepository;
