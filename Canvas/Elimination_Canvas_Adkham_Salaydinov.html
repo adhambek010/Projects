@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Elimination Canvas</title>
+  <title>Elimination Canvas Adkham Salaydinov</title>
   <style>
     body {
       text-align: center;
@@ -32,11 +32,12 @@
 <p id="finalAnswer" style="font-weight: bold;"></p>
 
 <script>
+  // Get canvas
   const canvas = document.getElementById("myCanvas");
   const ctx = canvas.getContext("2d");
   const W = canvas.width, H = canvas.height;
 
-  let stage = 0;
+  let stage = 0; // Current stage
 
   const stages = [
     {
@@ -81,26 +82,14 @@
     }
   ];
 
-  
-  /**
-    *
-    *  Converts math cordinates to canvas coordinates
-    *  x -> X value in math cordinate system.
-    *  y -> Y value in math coordinate system.
-    *  returns Array => Canvas cooredinates [Gx, Gy].
-    * 
-  */
+  // Math coordinates to canvas coordinates
   function toCanvasCoords(x, y) {
     const Gx = (x * W / 200) + W / 2;
     const Gy = (-y * H / 200) + H / 2;
     return [Gx, Gy];
   }
 
-  /**
-    *
-    *  Draws the X and Y axes on the canvas.
-    * 
-  */
+  // Draw X and Y
   function drawAxes() {
     ctx.strokeStyle = "black";
     ctx.beginPath();
@@ -109,16 +98,7 @@
     ctx.stroke();
   }
 
-  /**
-    *
-    *  Draws a straight line for the equation.
-    *  It cslculates two points and draws a line between them.
-    *  a -> Coefficient of x.
-    *  b -> Coefficient of y.
-    *  c -> Constant on the right side of the equation.
-    *  color -> Color to draw line.
-    * 
-  */
+  // Draw a line
   function drawLine(a, b, c, color) {
     let x1 = -100, x2 = 100;
     let y1 = (c - a * x1) / b;
@@ -132,15 +112,7 @@
     ctx.stroke();
   }
 
-  /**
-    *
-    *  Draws a point on the canvas.
-    *  a -> Coefficient of x.
-    *  b -> Coefficient of y.
-    *  c -> Constant on the right side of the equation.
-    *  color -> Color of the point.
-    * 
-  */
+  // Draw a point
   function drawPoint(x, y, color) {
     const [px, py] = toCanvasCoords(x, y);
     ctx.fillStyle = color;
@@ -149,11 +121,7 @@
     ctx.fill();
   }
 
-  /**
-    *
-    * Draws current stage. It clears first then shows the lines and text.
-    *  
-  */
+  // Current stage
   function drawStage() {
     ctx.clearRect(0, 0, W, H);
     drawAxes();
@@ -165,10 +133,7 @@
     stage === stages.length - 1 ? "Final Answer: x = -21, y = -6" : "";
   }
 
-  /**
-    * Moves to next stage and redraws canvas.
-    * 
-  */ 
+  // Next stage
   function nextStage() {
     if (stage < stages.length - 1) {
       stage++;
@@ -176,10 +141,7 @@
     }
   }
 
-  /**
-    * Moves to prevous stage and redraws canvas.
-    * 
-  */ 
+  // Previous stage
   function prevStage() {
     if (stage > 0) {
       stage--;
@@ -187,6 +149,7 @@
     }
   }
 
+  // Initial draw
   drawStage();
 
 </script>
